@@ -29,11 +29,6 @@ java {
     targetCompatibility = JavaVersion.VERSION_21
 }
 
-repositories {
-    maven { url = uri("https://mirrors.tencent.com/nexus/repository/maven-public") }
-    mavenCentral()
-}
-
 tasks.withType<Test> {
     systemProperty("java.util.logging.manager", "org.jboss.logmanager.LogManager")
     jvmArgs("--add-opens", "java.base/java.lang=ALL-UNNAMED")
